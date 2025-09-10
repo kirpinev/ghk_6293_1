@@ -91,7 +91,7 @@ export const App = () => {
 
   const submit = () => {
     window.gtag("event", "6293_get_sub", {
-      variant_name: "6293_1",
+      variant_name: "ghk_6293_1",
     });
 
     LS.setItem(LSKeys.ShowThx, true);
