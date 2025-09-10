@@ -13,39 +13,40 @@ export const ThxLayout = () => {
   };
 
   return (
-      <>
-        <div className={thxSt.container}>
-          <img
-              alt="Картинка ракеты"
-              src={bigSmile}
-              width={250}
-              className={thxSt.rocket}
-          />
-          <Typography.TitleResponsive
-              font="system"
-              tag="h1"
-              view="large"
-              defaultMargins={false}
-              weight="bold"
-          >
-            Сервис пока недоступен
-          </Typography.TitleResponsive>
-          <Gap size={8} />
-          <Typography.Text tag="p" view="primary-medium">
-            Вся команда очень старается, скоро всё заработает!
-          </Typography.Text>
-        </div>
+    <>
+      <div className={thxSt.container}>
+        <img
+          alt="Картинка ракеты"
+          src={bigSmile}
+          width={250}
+          className={thxSt.rocket}
+        />
+        <Typography.TitleResponsive
+          font="system"
+          tag="h1"
+          view="large"
+          defaultMargins={false}
+          weight="bold"
+        >
+          Такого вы точно не ожидали
+        </Typography.TitleResponsive>
+        <Gap size={8} />
+        <Typography.Text tag="p" view="primary-medium">
+          Вы только что поучаствовали в настоящем эксперименте. Сервиса не
+          существует. Мы скоро предложим лучшие условия!
+        </Typography.Text>
+      </div>
 
-        <div className={appSt.bottomBtn}>
-          <ButtonMobile
-              block
-              view="primary"
-              href="https://online.alfabank.ru/"
-              onClick={submit}
-          >
-            Спасибо, понятно!
-          </ButtonMobile>
-        </div>
-      </>
+      <div className={appSt.bottomBtn}>
+        <ButtonMobile
+          block
+          view="primary"
+          href="alfabank://multistep-route?fromModule=FORM&stepNumber=0&alias=alfa-subscription-alias&version=2"
+          onClick={submit}
+        >
+          Спасибо, понятно!
+        </ButtonMobile>
+      </div>
+    </>
   );
 };

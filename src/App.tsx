@@ -17,6 +17,7 @@ import { LS, LSKeys } from "./ls";
 import { appSt } from "./style.css";
 import { Gap } from "@alfalab/core-components/gap";
 import { useState } from "react";
+import { ThxLayout } from "./thx/ThxLayout.tsx";
 
 interface Product {
   title: string;
@@ -85,15 +86,6 @@ const products: Array<Product> = [
   },
 ];
 
-const alfaSmart =
-  "alfabank://multistep-route?fromModule=FORM&stepNumber=0&alias=alfa-subscription-alias&version=2";
-
-const Redirect = () => {
-  window.location.href = alfaSmart;
-
-  return null;
-};
-
 export const App = () => {
   const [thxShow, setThx] = useState(LS.getItem(LSKeys.ShowThx, false));
 
@@ -107,7 +99,7 @@ export const App = () => {
   };
 
   if (thxShow) {
-    return <Redirect />;
+    return <ThxLayout />;
   }
 
   return (
